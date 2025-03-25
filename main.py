@@ -12,9 +12,9 @@ st.title("LSTM Time Series Predictor")
 # Load pre-trained model from the backend
 MODEL_PATH = "PredictionModel.pkl"  # Path to the model stored in the backend
 
-@st.cache(allow_output_mutation=True)
+# @st.cache_data(allow_output_mutation=True)
 def load_model():
-    with open("", "rb") as file:
+    with open(MODEL_PATH, "rb") as file:
         model = pickle.load(file)
     return model
 
